@@ -1,5 +1,7 @@
 package org.example;
 
+import org.addtwosum.ListNode;
+
 import java.util.List;
 
 public class Main {
@@ -10,6 +12,7 @@ public class Main {
         org.validparentheses.Solution validParenthesesSolution = new org.validparentheses.Solution();
         org.reverseinteger.Solution reverseInteger = new org.reverseinteger.Solution();
         org.lettercombinationsofaphonenumber.Solution letterComb = new org.lettercombinationsofaphonenumber.Solution();
+        org.addtwosum.Solution addtwosum = new org.addtwosum.Solution();
 
         int[] solTwoNum = solution.twoSum(new int[]{2, 7, 11, 15}, 9);
         System.out.println("Solution: " + solTwoNum[0] + ", " + solTwoNum[1]);
@@ -32,5 +35,9 @@ public class Main {
 
         List<String> solLetterCombinations = letterComb.letterCombinations("2347");
         System.out.println("Solution " + solLetterCombinations.toString());
+
+        ListNode l1 = new ListNode(9);
+        ListNode l2 = new ListNode(1, new ListNode(9, new ListNode(9)));
+        ListNode solAddTwoSum = addtwosum.addTwoNumbers(l1,l2);
     }
 }
